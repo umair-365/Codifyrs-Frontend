@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import heroBanner from "@/assets/hero-banner.jpg";
+
+import herobanner1 from "@/assets/banner1.jpg";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -32,14 +34,19 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl" className="group">
-                Get Started Today
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="xl">
-                View Our Work
-              </Button>
-            </div>
+           <Link to="/contact">
+  <Button variant="hero" size="xl" className="group">
+    Get Started Today
+    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+  </Button>
+</Link>
+
+<Link to="/portfolio">
+  <Button variant="outline" size="xl">
+    View Our Work
+  </Button>
+</Link>
+            </div>  
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
@@ -62,7 +69,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl transform rotate-3"></div>
             <img
-              src={heroBanner}
+              src={herobanner1}
               alt="Digital Innovation"
               className="relative z-10 w-full h-auto rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-700"
             />

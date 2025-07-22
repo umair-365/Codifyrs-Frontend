@@ -1,13 +1,17 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import member1  from "../assets/umair.jpg.jpg";
+import member2 from "../assets/hussnain.jpg.jpg";
+import member3 from "../assets/muzmail.jpg.jpg";
+import member4 from "../assets/khubaib.jpg.png";
 
 const TeamsSection = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "Sarah Chen",
+      name: "Muhammad Umair Ansari",
       role: "CEO & Founder",
       bio: "Visionary leader with 10+ years in digital transformation. Former VP at leading tech companies.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616c6aebaa3?w=400&h=400&fit=crop&crop=face",
+      image: member1,
       skills: ["Strategy", "Leadership", "Product Vision"],
       social: {
         linkedin: "#",
@@ -17,11 +21,11 @@ const TeamsSection = () => {
     },
     {
       id: 2,
-      name: "Alex Rodriguez",
-      role: "Lead Developer",
+      name: "Muhammad Hussain",
+      role: "Phython Developer",
       bio: "Full-stack engineer passionate about creating scalable solutions. Expert in modern web technologies.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      skills: ["React", "Node.js", "AWS"],
+      image: member2,
+      skills: ["Django", "Fast API", "AWS","Scrapy","Selenium"],
       social: {
         github: "#",
         linkedin: "#",
@@ -30,11 +34,11 @@ const TeamsSection = () => {
     },
     {
       id: 3,
-      name: "Maya Patel",
-      role: "Head of Design",
+      name: "Saeed Anwar",
+      role: "Phython Developer",
       bio: "Creative director with expertise in user experience and visual design. Award-winning designer.",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-      skills: ["UI/UX", "Figma", "Design Systems"],
+      skills: ["Data Scrapping", "Django", "Wordpress"],
       social: {
         linkedin: "#",
         twitter: "#",
@@ -43,7 +47,7 @@ const TeamsSection = () => {
     },
     {
       id: 4,
-      name: "David Kim",
+      name: "Muhammad Umar Ansari",
       role: "Tech Lead",
       bio: "Architecture specialist focused on building robust, scalable systems. Open source contributor.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
@@ -56,7 +60,7 @@ const TeamsSection = () => {
     },
     {
       id: 5,
-      name: "Emily Johnson",
+      name: "Muhammad faizan",
       role: "Project Manager",
       bio: "Agile expert ensuring seamless project delivery. Certified Scrum Master with proven track record.",
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face",
@@ -68,10 +72,23 @@ const TeamsSection = () => {
     },
     {
       id: 6,
-      name: "Marcus Thompson",
+      name: "Muhammad Muzamil",
       role: "Mobile Developer",
       bio: "React Native specialist with expertise in iOS and Android development. Performance optimization guru.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+      image: member3,
+      skills: ["React Native", "iOS", "Android"],
+      social: {
+        github: "#",
+        linkedin: "#",
+        email: "marcus@flicken.io"
+      }
+    },
+     {
+      id: 7,
+      name: "Muhammad Khubaib",
+      role: "Web Developer",
+      bio: "React Native specialist with expertise in iOS and Android development. Performance optimization guru.",
+      image: member4,
       skills: ["React Native", "iOS", "Android"],
       social: {
         github: "#",
@@ -79,6 +96,7 @@ const TeamsSection = () => {
         email: "marcus@flicken.io"
       }
     }
+    
   ];
 
   const getSocialIcon = (platform: string) => {

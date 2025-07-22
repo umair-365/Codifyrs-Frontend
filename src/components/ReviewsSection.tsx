@@ -128,7 +128,7 @@ const ReviewsSection = () => {
               Let's create something amazing together and add your success story to our collection.
             </p>
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
             >
               Start Your Project
