@@ -49,20 +49,20 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: "hello@flicken.io",
+      details: "muhammadumair@codifyrs.com",
       subtitle: "We reply within 24 hours"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: "+1 (555) 123-4567",
-      subtitle: "Monday to Friday, 9 AM - 6 PM PST"
+      details: "(+92) 3204664643",
+      subtitle: "Monday to Friday, 9 AM - 6 PM PKT"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "San Francisco, CA",
-      subtitle: "123 Innovation Drive, Suite 100"
+      details: "Lahore, Punjab Pakistan",
+      subtitle: "123 Street Drive, Suite 100"
     },
     {
       icon: Clock,
@@ -74,10 +74,11 @@ const ContactSection = () => {
 
   const projectTypes = [
     { value: "web-development", label: "Web Development" },
-    { value: "mobile-app", label: "Mobile App" },
-    { value: "ui-ux-design", label: "UI/UX Design" },
-    { value: "digital-strategy", label: "Digital Strategy" },
-    { value: "team-augmentation", label: "Team Augmentation" },
+    { value: "scrapping", label: "Scrapping" },
+    { value: "selenium-automation", label: "Selenium Automation" },
+    { value: "python-scripting", label: "Python Scripting" },
+    { value: "product-launch", label: "Product Launch" },
+    // { value: "team-augmentation", label: "Team Augmentation" },
     { value: "other", label: "Other" }
   ];
 

@@ -10,8 +10,16 @@ import Services from "./pages/Services";
 import Portfolio from "./pages/Portfolio";
 import Reviews from "./pages/Reviews";
 import NotFound from "./pages/NotFound";
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import Contact from "./pages/Contact";
 import Career from "./pages/Career";
+=======
+import ScrollToTop from "@/components/ScrollToTop";
+>>>>>>> Stashed changes
+=======
+import ScrollToTop from "@/components/ScrollToTop";
+>>>>>>> Stashed changes
 
 const queryClient = new QueryClient();
 
@@ -22,6 +30,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+         <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/teams" element={<Teams />} />

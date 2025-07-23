@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { 
   Code, 
-  Palette, 
-  Smartphone, 
+  Network, 
+  Sliders, 
   Globe, 
   Rocket, 
   Users,
@@ -15,25 +16,25 @@ const ServicesSection = () => {
       icon: Code,
       title: "Web Development",
       description: "Custom web applications built with modern technologies and best practices for optimal performance.",
-      features: ["React & Next.js", "Node.js Backend", "Database Design", "API Integration"]
+      features: ["React & Next.js", "D Jango", "Node.js Backend", "Database Design", "API Integration"]
     },
     {
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "Beautiful, intuitive designs that provide exceptional user experiences and drive conversions.",
-      features: ["User Research", "Wireframing", "Prototyping", "Design Systems"]
+      icon: Network,
+      title: " Scrapping",
+      description: "Get real-time, structured data from any website with our efficient and secure scraping solutions.",
+      features: ["Real-Time Data Extraction", "Customizable Scraping", "High-Speed Performance", "Scalable Solutions", " Multi-Source Scraping", "Ongoing Support"]
     },
     {
-      icon: Smartphone,
-      title: "Mobile Apps",
-      description: "Native and cross-platform mobile applications that engage users across all devices.",
-      features: ["iOS & Android", "React Native", "App Store Optimization", "Push Notifications"]
+      icon: Sliders,
+      title: " Selenium Automation",
+      description: "Selenium Automation enables fast, reliable browser testing and interaction through scripted control, helping teams streamline QA, detect bugs early, and ensure cross-browser compatibility.",
+      features: ["Cross-Browser Testing", "Headless Execution", "DOM Interaction", "Form Filling", "Screenshot Capture", "Real-Time Monitoring", "Custom Test Scripts", "Parallel Execution", "Data Extraction", "CI/CD Integration"]
     },
     {
       icon: Globe,
-      title: "Digital Strategy",
-      description: "Comprehensive digital strategies to help your business grow and reach new markets.",
-      features: ["Market Analysis", "Brand Strategy", "Digital Marketing", "Growth Hacking"]
+      title: "Python Scripting",
+      description: "Python scripting offers a powerful and flexible way to automate tasks, process data, build tools, and integrate systems using simple, readable code.",
+      features: ["Easy Syntax", "Rapid Development", "Cross-Platform Support", "Extensive Libraries", "File Handling", "API Integration", "Data Processing", "Automation Capabilities", "Error Handling", "Third-Party Module Support"]
     },
     {
       icon: Rocket,
@@ -41,12 +42,12 @@ const ServicesSection = () => {
       description: "End-to-end product development from ideation to successful market launch.",
       features: ["MVP Development", "Market Testing", "Launch Strategy", "Post-Launch Support"]
     },
-    {
-      icon: Users,
-      title: "Team Augmentation",
-      description: "Dedicated remote teams that integrate seamlessly with your existing workforce.",
-      features: ["Remote Teams", "Skill Matching", "Project Management", "Quality Assurance"]
-    }
+    // {
+    //   icon: Users,
+    //   title: "Team Augmentation",
+    //   description: "Dedicated remote teams that integrate seamlessly with your existing workforce.",
+    //   features: ["Remote Teams", "Skill Matching", "Project Management", "Quality Assurance"]
+    // }
   ];
 
   return (
@@ -95,20 +96,22 @@ const ServicesSection = () => {
                 ))}
               </ul>
               
-              <Button variant="ghost" size="sm" className="group/btn p-0 h-auto font-medium text-primary hover:text-primary">
+              {/* <Button variant="ghost" size="sm" className="group/btn p-0 h-auto font-medium text-primary hover:text-primary">
                 Learn More
                 <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-              </Button>
+              </Button> */}
             </div>
           ))}
         </div>
 
         {/* CTA */}
         <div className="text-center">
+        <Link to="/contact">
           <Button variant="hero" size="xl" className="group">
             Start Your Project
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
+          </Link>
         </div>
       </div>
     </section>
