@@ -1,55 +1,56 @@
 import { Star, Quote } from "lucide-react";
+import Solomoon from "../assets/Solomoon image.jpg"
 
 const ReviewsSection = () => {
   const reviews = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      role: "CEO, TechStartup Inc.",
+      name: "Solomon Amos",
+      role: "Founder, HomePortfolio.",
       rating: 5,
-      review: "CODIFYRS transformed our digital presence completely. Their team delivered beyond our expectations with incredible attention to detail and innovative solutions.",
-      avatar: "SJ"
+      review: "Codfyrs demonstrated a deep understanding of the intricate challenges involved in managing and automating data flows. Their team was instrumental in designing and implementing a robust and scalable data pipeline architecture that significantly enhanced HomePortfolio's data processing efficiency and reliability. Their ability to troubleshoot and resolve complex data injection issues was exceptional, saving our team countless hours. The contributions from Codfyrs were critical to the success of our projects, and I’m confident they will be a tremendous asset to any organization.",
+      avatar: Solomoon
     },
     {
       id: 2,
-      name: "Michael Chen",
-      role: "Marketing Director, GrowthCorp",
+      name: "Yevgen Sholudchenko ",
+      role: "CEO, Data-Hub Sholudchenko FlexKapG",
       rating: 5,
-      review: "Working with CODIFYRS was a game-changer for our business. They delivered a stunning website that increased our conversion rates by 150%.",
-      avatar: "MC"
+      review: "Working with Codfyrs has been a great experience — tasks are completed quickly and with high quality. The team consistently brings valuable ideas, especially on how to reduce costs on proxies and other tools. They also supported us in building a robust pipeline for scheduling scrapers and monitoring performance. If you're looking to build a scalable and efficient crawling infrastructure, I can highly recommend Codfyrs.",
+      avatar: "YS"
     },
-    {
-      id: 3,
-      name: "Emily Rodriguez",
-      role: "Founder, CreativeAgency",
-      rating: 5,
-      review: "The team at CODIFYRS is exceptional. They understood our vision perfectly and created a brand identity that truly represents who we are.",
-      avatar: "ER"
-    },
-    {
-      id: 4,
-      name: "David Thompson",
-      role: "CTO, InnovateLabs",
-      rating: 5,
-      review: "Professional, reliable, and incredibly talented. CODIFYRS delivered our complex web application on time and exceeded all our technical requirements.",
-      avatar: "DT"
-    },
-    {
-      id: 5,
-      name: "Lisa Wang",
-      role: "Product Manager, NextGen Solutions",
-      rating: 5,
-      review: "Outstanding work! The user experience they created for our platform is intuitive and beautiful. Our users love the new design.",
-      avatar: "LW"
-    },
-    {
-      id: 6,
-      name: "Robert Martinez",
-      role: "Owner, Local Business Co.",
-      rating: 5,
-      review: "CODIFYRS helped us go digital and reach more customers than ever before. Their SEO and digital marketing strategies have been incredibly effective.",
-      avatar: "RM"
-    }
+    // {
+    //   id: 3,
+    //   name: "Emily Rodriguez",
+    //   role: "Founder, CreativeAgency",
+    //   rating: 5,
+    //   review: "The team at CODIFYRS is exceptional. They understood our vision perfectly and created a brand identity that truly represents who we are.",
+    //   avatar: "ER"
+    // },
+    // {
+    //   id: 4,
+    //   name: "David Thompson",
+    //   role: "CTO, InnovateLabs",
+    //   rating: 5,
+    //   review: "Professional, reliable, and incredibly talented. CODIFYRS delivered our complex web application on time and exceeded all our technical requirements.",
+    //   avatar: "DT"
+    // },
+    // {
+    //   id: 5,
+    //   name: "Lisa Wang",
+    //   role: "Product Manager, NextGen Solutions",
+    //   rating: 5,
+    //   review: "Outstanding work! The user experience they created for our platform is intuitive and beautiful. Our users love the new design.",
+    //   avatar: "LW"
+    // },
+    // {
+    //   id: 6,
+    //   name: "Robert Martinez",
+    //   role: "Owner, Local Business Co.",
+    //   rating: 5,
+    //   review: "CODIFYRS helped us go digital and reach more customers than ever before. Their SEO and digital marketing strategies have been incredibly effective.",
+    //   avatar: "RM"
+    // }
   ];
 
   const renderStars = (rating: number) => {
@@ -99,21 +100,31 @@ const ReviewsSection = () => {
               </p>
 
               {/* Client Info */}
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-primary font-semibold text-sm">
-                    {review.avatar}
-                  </span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">
-                    {review.name}
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    {review.role}
-                  </p>
-                </div>
-              </div>
+             {/* Client Info */}
+<div className="flex items-center">
+  {typeof review.avatar === "string" && review.avatar.includes(".jpg") ? (
+    <img
+      src={review.avatar}
+      alt={review.name}
+      className="w-12 h-12 rounded-full object-cover mr-4 border border-border"
+    />
+  ) : (
+    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+      <span className="text-primary font-semibold text-sm">
+        {review.avatar}
+      </span>
+    </div>
+  )}
+  <div>
+    <h4 className="font-semibold text-foreground">
+      {review.name}
+    </h4>
+    <p className="text-sm text-muted-foreground">
+      {review.role}
+    </p>
+  </div>
+</div>
+
             </div>
           ))}
         </div>

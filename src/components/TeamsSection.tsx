@@ -22,7 +22,7 @@ const TeamsSection = () => {
     {
       id: 2,
       name: "Muhammad Hussain",
-      role: "Phython Developer",
+      role: "Python Developer",
       bio: "Full-stack engineer passionate about creating scalable solutions. Expert in modern web technologies.",
       image: member2,
       skills: ["Django", "Fast API", "AWS","Scrapy","Selenium"],
@@ -35,9 +35,9 @@ const TeamsSection = () => {
     {
       id: 3,
       name: "Saeed Anwar",
-      role: "Phython Developer",
+      role: "Python Developer",
       bio: "Creative director with expertise in user experience and visual design. Award-winning designer.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+      image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=400&fit=crop",
       skills: ["Data Scrapping", "Django", "Wordpress"],
       social: {
         linkedin: "#",
@@ -63,7 +63,7 @@ const TeamsSection = () => {
       name: "Muhammad faizan",
       role: "Project Manager",
       bio: "Agile expert ensuring seamless project delivery. Certified Scrum Master with proven track record.",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face",
+      image: "https://images.pexels.com/photos/9775435/pexels-photo-9775435.jpeg?auto=compress&cs=tinysrgb&h=400&fit=crop",
       skills: ["Agile", "Scrum", "Team Leadership"],
       social: {
         linkedin: "#",

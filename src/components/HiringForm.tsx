@@ -18,29 +18,36 @@ const HiringForm: React.FC = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 px-6 py-12 flex flex-col items-center justify-center">
       <h2 className="text-3xl font-bold text-[#38DC8F] dark:text-[#38DC8F] mb-8 text-center">
-        WE'RE HIRING!
-      </h2>
+  Join Our Team of Innovators!
+</h2>
 
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* Left Section - Job Description */}
-        <div>
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Python Developer</h3>
-          <p className="text-gray-700 dark:text-gray-300 mb-4">
-            RistySoft immediately requires <strong>Django/React Senior Software Engineers</strong> graduated from reputable universities and have good communication skills.
-          </p>
+<div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12">
+  {/* Left Section - Job Description */}
+  <div>
+    <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Open Positions</h3>
+    <p className="text-gray-700 dark:text-gray-300 mb-4">
+      CODIFYRS is on the lookout for passionate and talented professionals to join our growing team. Whether you specialize in <strong>development, design, project management, or marketing</strong>, we value creativity, collaboration, and a drive for excellence.
+    </p>
 
-          <h4 className="font-semibold dark:text-white mb-1">Requirements:</h4>
-          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-            <li>
-              2 to 4 years’ post-graduation experience and outstanding knowledge of <strong>Python, Django/React framework</strong> along with the following:
-            </li>
-            <li>OOP &amp; Databases.</li>
-            <li>PostgreSQL, NoSQL or any other RDBMS.</li>
-            <li>Front-end development using jQuery, JavaScript, HTML &amp; CSS.</li>
-            <li>API’s i.e. Google, Facebook.</li>
-            <li>RESTful web-services.</li>
-          </ul>
-        </div>
+    <h4 className="font-semibold dark:text-white mb-1">We’re Looking For:</h4>
+    <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+      <li>Frontend &amp; Backend Developers (React, Django, Node.js, etc.)</li>
+      <li>Mobile App Developers (Flutter, React Native)</li>
+      <li>UI/UX Designers with creative flair</li>
+      <li>Project Managers &amp; QA Engineers</li>
+      <li>Digital Marketing &amp; SEO Experts</li>
+      <li>Fresh graduates with strong portfolios are also encouraged to apply</li>
+    </ul>
+
+    <h4 className="font-semibold dark:text-white mt-4 mb-1">General Requirements:</h4>
+    <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+      <li>1 to 5 years of relevant experience (or exceptional fresh grads)</li>
+      <li>Strong problem-solving and communication skills</li>
+      <li>Ability to work in a fast-paced, team-oriented environment</li>
+      <li>Willingness to learn and grow with modern tools and frameworks</li>
+    </ul>
+  </div>
+
 
         {/* Right Section - Apply Form */}
         <div className="border-l border-gray-300 dark:border-gray-700 md:pl-10">
