@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import TeamsSection from "@/components/TeamsSection";
+import Footer from "@/components/Footer";
 
 const Teams = () => {
   return (
@@ -7,6 +8,7 @@ const Teams = () => {
       <Navigation />
       <div className="pt-16">
         <TeamsSection />
+        <Footer/>
       </div>
     </div>
   );

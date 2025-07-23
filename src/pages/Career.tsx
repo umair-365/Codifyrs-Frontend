@@ -1,6 +1,7 @@
 import React from 'react'
 import Navigation from "@/components/Navigation";
 import HiringForm from '@/components/HiringForm';
+import Footer from "@/components/Footer";
 
 const Career = () => {
   return (
@@ -9,6 +10,7 @@ const Career = () => {
       <Navigation />
       <div className="pt-16">
         <HiringForm />
+        <Footer/>
       </div>
     </div>
   )
