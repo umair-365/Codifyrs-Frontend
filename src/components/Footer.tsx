@@ -23,8 +23,8 @@ const Footer = () => {
         { name: "Portfolio", to: "/portfolio" },
         { name: "Reviews", to: "/reviews" },
         { name: "Contact Us", to: "/contact" },
-        { name: "Our Team", to: "/team" },
-        { name: "Careers", to: "/careers" }
+        { name: "Our Team", to: "/teams" },
+        { name: "Careers", to: "/career" }
       ]
     },
     {

@@ -1,6 +1,6 @@
 import { Star, Quote } from "lucide-react";
 import Solomoon from "../assets/Solomoon image.jpg"
-
+import Yevgen from "../assets/yevgen image.jpg"
 const ReviewsSection = () => {
   const reviews = [
     {
@@ -8,7 +8,7 @@ const ReviewsSection = () => {
       name: "Solomon Amos",
       role: "Founder, HomePortfolio.",
       rating: 5,
-      review: "Codfyrs demonstrated a deep understanding of the intricate challenges involved in managing and automating data flows. Their team was instrumental in designing and implementing a robust and scalable data pipeline architecture that significantly enhanced HomePortfolio's data processing efficiency and reliability. Their ability to troubleshoot and resolve complex data injection issues was exceptional, saving our team countless hours. The contributions from Codfyrs were critical to the success of our projects, and I’m confident they will be a tremendous asset to any organization.",
+      review: "Codifyrs demonstrated a deep understanding of the intricate challenges involved in managing and automating data flows. Their team was instrumental in designing and implementing a robust and scalable data pipeline architecture that significantly enhanced HomePortfolio's data processing efficiency and reliability. Their ability to troubleshoot and resolve complex data injection issues was exceptional, saving our team countless hours. The contributions from Codfyrs were critical to the success of our projects, and I’m confident they will be a tremendous asset to any organization.",
       avatar: Solomoon
     },
     {
@@ -16,8 +16,8 @@ const ReviewsSection = () => {
       name: "Yevgen Sholudchenko ",
       role: "CEO, Data-Hub Sholudchenko FlexKapG",
       rating: 5,
-      review: "Working with Codfyrs has been a great experience — tasks are completed quickly and with high quality. The team consistently brings valuable ideas, especially on how to reduce costs on proxies and other tools. They also supported us in building a robust pipeline for scheduling scrapers and monitoring performance. If you're looking to build a scalable and efficient crawling infrastructure, I can highly recommend Codfyrs.",
-      avatar: "YS"
+      review: "Working with Codifyrs has been a great experience — tasks are completed quickly and with high quality. The team consistently brings valuable ideas, especially on how to reduce costs on proxies and other tools. They also supported us in building a robust pipeline for scheduling scrapers and monitoring performance. If you're looking to build a scalable and efficient crawling infrastructure, I can highly recommend Codfyrs.",
+      avatar: Yevgen
     },
     // {
     //   id: 3,
@@ -65,7 +65,7 @@ const ReviewsSection = () => {
   };
 
   return (
-    <section id="reviews" className="py-24 bg-gradient-to-br from-background to-muted/30">
+    <section id="reviews" className="py-20 bg-gradient-to-br from-background to-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">

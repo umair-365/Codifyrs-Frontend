@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-
-import herobanner1 from "@/assets/banner1.jpg";
+import herobanner1 from "@/assets/banner1.png";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
@@ -22,30 +21,30 @@ const HeroSection = () => {
               <Sparkles className="w-4 h-4" />
               <span>Empowering Digital Innovation</span>
             </div>
-            
-            <h1 className="hero-text">
+
+            <h1 className="hero-text text-black dark:text-white">
               Empowering the
               <span className="block text-primary">Innovations</span>
             </h1>
-            
+
             <p className="section-text max-w-lg">
               Codifyrs provides dedicated remote teams that work closely with you to design and build your idea. 
               Transform your vision into reality with our expert development and design services.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-           <Link to="/contact">
-  <Button variant="hero" size="xl" className="group">
-    Get Started Today
-    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-  </Button>
-</Link>
 
-<Link to="/portfolio">
-  <Button variant="outline" size="xl">
-    View Our Work
-  </Button>
-</Link>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/contact">
+                <Button variant="hero" size="xl" className="group">
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+
+              <Link to="/portfolio">
+                <Button variant="outline" size="xl">
+                  View Our Work
+                </Button>
+              </Link>
             </div>  
 
             {/* Stats */}
@@ -65,40 +64,43 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Column - Hero Image */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl transform rotate-3"></div>
-            <img
-              src={herobanner1}
-              alt="Digital Innovation"
-              className="relative z-10 w-full h-auto rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-700"
-            />
-            
-            {/* Floating cards */}
-            <div className="absolute -top-6 -left-6 bg-background rounded-xl p-4 shadow-lg border border-border card-hover">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <span className="text-primary font-bold">99%</span>
-                </div>
-                <div>
-                  <div className="text-sm font-semibold">Success Rate</div>
-                  <div className="text-xs text-muted-foreground">Client Satisfaction</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="absolute -bottom-6 -right-6 bg-background rounded-xl p-4 shadow-lg border border-border card-hover">
-              <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <span className="text-primary font-bold">24/7</span>
-                </div>
-                <div>
-                  <div className="text-sm font-semibold">Support</div>
-                  <div className="text-xs text-muted-foreground">Always Available</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Right Column - Hero Image with Cards */}
+        <div className="relative pt-36"> {/* Increased padding-top from pt-24 to pt-36 */}
+  {/* Floating Cards at top-right */}
+  <div className="absolute top-2 right-0 flex space-x-4 z-20"> {/* Moved cards down using top-10 */}
+    <div className="bg-background rounded-xl p-4 shadow-lg border border-border card-hover">
+      <div className="flex items-center space-x-3">
+        <div className="w-5 h-5 bg-primary/15 rounded-lg flex items-center justify-center">
+          <span className="text-primary font-bold">99%</span>
+        </div>
+        <div>
+          <div className="text-sm font-semibold">Success Rate</div>
+          <div className="text-xs text-muted-foreground">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-background rounded-xl p-4 shadow-lg border border-border card-hover">
+      <div className="flex items-center space-x-3">
+        <div className="w-5 h-5 bg-primary/15 rounded-lg flex items-center justify-center">
+          <span className="text-primary font-bold">24/7</span>
+        </div>
+        <div>
+          <div className="text-sm font-semibold">Support</div>
+          <div className="text-xs text-muted-foreground">Always Available</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Banner Image */}
+  <img
+    src={herobanner1}
+    alt="Digital Innovation"
+    className="relative z-10 w-[85%] mx-auto mb-10 rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-700"
+  />
+</div>
+
         </div>
       </div>
     </section>
