@@ -67,7 +67,7 @@ const HeroSection = () => {
           {/* Right Column - Hero Image with Cards */}
         <div className="relative pt-36"> {/* Increased padding-top from pt-24 to pt-36 */}
   {/* Floating Cards at top-right */}
-  <div className="absolute top-2 right-0 flex space-x-4 z-20"> {/* Moved cards down using top-10 */}
+  {/* <div className="absolute top-2 right-0 flex space-x-4 z-20"> 
     <div className="bg-background rounded-xl p-4 shadow-lg border border-border card-hover">
       <div className="flex items-center space-x-3">
         <div className="w-5 h-5 bg-primary/15 rounded-lg flex items-center justify-center">
@@ -91,7 +91,7 @@ const HeroSection = () => {
         </div>
       </div>
     </div>
-  </div>
+  </div> */}
 
   {/* Banner Image */}
   <img
