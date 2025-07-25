@@ -97,7 +97,7 @@ const HeroSection = () => {
   <img
     src={herobanner1}
     alt="Digital Innovation"
-    className="relative z-10 w-[85%] mx-auto mb-10 rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-700"
+    className="relative z-10 w-[85%] mx-auto mb-20 rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-700"
   />
 </div>
 
