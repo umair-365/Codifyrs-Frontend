@@ -3,6 +3,7 @@ import { Star, Quote } from "lucide-react";
 import Solomoon from "../assets/Solomoon image.jpg";
 import Yevgen from "../assets/yevgen image.jpg";
 import  Fink from "../assets/Fink.jpg"
+import Carlos from "../assets/Carlos.jpg"
 
 const ReviewsSection = () => {
   const reviews = [
@@ -32,14 +33,14 @@ const ReviewsSection = () => {
       review: "Working with Codifyrs has been an absolute pleasure. Their expertise in Python is truly impressive—they deliver clean, efficient, and well-documented code that consistently exceeds expectations. One of Codifyrs’ standout strengths is their ability to design and implement powerful web scraping solutions. They handle complex data extraction tasks with ease, even from dynamic and challenging sources, making them an invaluable partner on any data-driven project. What truly sets Codifyrs apart, however, is their deep understanding of the sports domain. Whether it's analyzing performance data, building sports models, or working with real-time data feeds, their insight into the sports industry adds an extra layer of intelligence and context to their work. This rare combination of technical expertise and domain knowledge is incredibly valuable. I highly recommend Codifyrs for any project requiring advanced Python development, data scraping, or sports-related analytics. They are professional, reliable, and always go the extra mile to ensure success.",
       avatar: Fink,
     },
-    // {
-    //   id: 4,
-    //   name: "David Thompson",
-    //   role: "CTO, InnovateLabs",
-    //   rating: 5,
-    //   review: "Professional, reliable, and incredibly talented. CODIFYRS delivered our complex web application on time and exceeded all our technical requirements.",
-    //   avatar: "DT"
-    // },
+    {
+      id: 4,
+      name: "Carlos Gutierrez",
+      role: "President, Beast Communications LLC",
+      rating: 5,
+      review: "This testimonal confirms the services provided by Codifyrs. I have worked with their team for close to two years, and they have consistently proven to be a dependable and skilled partner. Communication has always been clear and proactive. If there were any delays, Codifyrs alerted me immediately. When scripts encountered issues—often due to external website changes—they were quick to adapt, update the code, and implement reliable workarounds, ensuring minimal disruption to operations. Beyond their technical capabilities, Codifyrs brings a strong sense of ownership to every task. They take the time to understand project goals, offer suggestions for improvement, and deliver scalable, efficient solutions that go beyond expectations. Their reliability, expertise in automation and data scraping, and commitment to quality make Codifyrs a trusted partner. I highly recommend them for any data-driven or backend development project where precision, speed, and accountability matter.",
+      avatar: Carlos
+    },
     // {
     //   id: 5,
     //   name: "Lisa Wang",
