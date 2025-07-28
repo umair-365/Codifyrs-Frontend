@@ -3,6 +3,8 @@ import member1  from "../assets/umair.jpg.jpg";
 import member2 from "../assets/hussnain.jpg.jpg";
 import member3 from "../assets/muzmail.jpg.jpg";
 import member4 from "../assets/khubaib.jpg.png";
+import member5 from "../assets/member5.jpg.png";
+
 
 const TeamsSection = () => {
   const teamMembers = [
@@ -13,11 +15,11 @@ const TeamsSection = () => {
       bio: "Visionary leader with 10+ years in digital transformation. Former VP at leading tech companies.",
       image: member1,
       skills: ["Strategy", "Leadership", "Product Vision"],
-      social: {
-        linkedin: "#",
-        twitter: "#",
-        email: "sarah@flicken.io"
-      }
+      // social: {
+      //   // linkedin: "#",
+      //   // twitter: "#",
+      //   // email: "sarah@flicken.io"
+      // }
     },
     {
       id: 2,
@@ -26,11 +28,11 @@ const TeamsSection = () => {
       bio: "Full-stack engineer passionate about creating scalable solutions. Expert in modern web technologies.",
       image: member2,
       skills: ["Django", "Fast API", "AWS","Scrapy","Selenium"],
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "alex@flicken.io"
-      }
+      // social: {
+      //   github: "#",
+      //   linkedin: "#",
+      //   email: "alex@flicken.io"
+      // }
     },
     {
       id: 3,
@@ -38,25 +40,25 @@ const TeamsSection = () => {
       role: "Python Developer",
       bio: "Creative director with expertise in user experience and visual design. Award-winning designer.",
       image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=400&fit=crop",
-      skills: ["Data Scrapping", "Django", "Wordpress"],
-      social: {
-        linkedin: "#",
-        twitter: "#",
-        email: "maya@flicken.io"
-      }
+      skills: ["Data Scrapping", "Django", "Wordpress, Marketing"],
+      // social: {
+      //   linkedin: "#",
+      //   twitter: "#",
+      //   email: "maya@flicken.io"
+      // }
     },
     {
       id: 4,
       name: "Muhammad Umar Ansari",
       role: "Tech Lead",
       bio: "Architecture specialist focused on building robust, scalable systems. Open source contributor.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+      image: member5,
       skills: ["System Architecture", "DevOps", "Security"],
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "david@flicken.io"
-      }
+      // social: {
+      //   // github: "#",
+      //   // linkedin: "#",
+      //   // email: "david@flicken.io"
+      // }
     },
     {
       id: 5,
@@ -65,10 +67,10 @@ const TeamsSection = () => {
       bio: "Agile expert ensuring seamless project delivery. Certified Scrum Master with proven track record.",
       image: "https://images.pexels.com/photos/9775435/pexels-photo-9775435.jpeg?auto=compress&cs=tinysrgb&h=400&fit=crop",
       skills: ["Agile", "Scrum", "Team Leadership"],
-      social: {
-        linkedin: "#",
-        email: "emily@flicken.io"
-      }
+      // social: {
+      //   linkedin: "#",
+      //   email: "emily@flicken.io"
+      // }
     },
     {
       id: 6,
@@ -76,25 +78,25 @@ const TeamsSection = () => {
       role: "Mobile Developer",
       bio: "React Native specialist with expertise in iOS and Android development. Performance optimization guru.",
       image: member3,
-      skills: ["React Native", "iOS", "Android"],
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "marcus@flicken.io"
-      }
+      skills: [ "React JS", "React Native", "iOS", "Android"],
+      // social: {
+      //   github: "#",
+      //   linkedin: "#",
+      //   email: "marcus@flicken.io"
+      // }
     },
      {
       id: 7,
       name: "Muhammad Khubaib",
       role: "Web Developer",
-      bio: "React Native specialist with expertise in iOS and Android development. Performance optimization guru.",
+      bio: "React JS specialist with expertise in Web and Android development. Performance optimization guru.",
       image: member4,
-      skills: ["React Native", "iOS", "Android"],
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "marcus@flicken.io"
-      }
+      skills: [ "React JS","React Native", "iOS", "Android"],
+      // social: {
+      //   github: "#",
+      //   linkedin: "#",
+      //   email: "marcus@flicken.io"
+      // }
     }
     
   ];
@@ -177,7 +179,7 @@ const TeamsSection = () => {
               </div>
 
               {/* Social Links */}
-              <div className="flex justify-center space-x-3">
+              {/* <div className="flex justify-center space-x-3">
                 {Object.entries(member.social).map(([platform, url]) => {
                   const IconComponent = getSocialIcon(platform);
                   return (
@@ -190,7 +192,7 @@ const TeamsSection = () => {
                     </a>
                   );
                 })}
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

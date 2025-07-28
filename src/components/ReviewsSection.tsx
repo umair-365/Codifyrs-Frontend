@@ -1,11 +1,14 @@
-
+import { useState, useRef } from "react";
 import { Star, Quote } from "lucide-react";
 import Solomoon from "../assets/Solomoon image.jpg";
 import Yevgen from "../assets/yevgen image.jpg";
-import  Fink from "../assets/Fink.jpg"
-import Carlos from "../assets/Carlos.jpg"
+import Fink from "../assets/Fink.jpg";
+import Carlos from "../assets/Carlos.jpg";
 
 const ReviewsSection = () => {
+  const [hoveredReview, setHoveredReview] = useState<number | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
   const reviews = [
     {
       id: 1,
@@ -30,7 +33,8 @@ const ReviewsSection = () => {
       name: "Christian Fink",
       role: "Founder, CEO, cmf Gmbh",
       rating: 5,
-      review: "Working with Codifyrs has been an absolute pleasure. Their expertise in Python is truly impressive—they deliver clean, efficient, and well-documented code that consistently exceeds expectations. One of Codifyrs’ standout strengths is their ability to design and implement powerful web scraping solutions. They handle complex data extraction tasks with ease, even from dynamic and challenging sources, making them an invaluable partner on any data-driven project. What truly sets Codifyrs apart, however, is their deep understanding of the sports domain. Whether it's analyzing performance data, building sports models, or working with real-time data feeds, their insight into the sports industry adds an extra layer of intelligence and context to their work. This rare combination of technical expertise and domain knowledge is incredibly valuable. I highly recommend Codifyrs for any project requiring advanced Python development, data scraping, or sports-related analytics. They are professional, reliable, and always go the extra mile to ensure success.",
+      review:
+        "Working with Codifyrs has been an absolute pleasure. Their expertise in Python is truly impressive—they deliver clean, efficient, and well-documented code that consistently exceeds expectations. One of Codifyrs’ standout strengths is their ability to design and implement powerful web scraping solutions. They handle complex data extraction tasks with ease, even from dynamic and challenging sources, making them an invaluable partner on any data-driven project. What truly sets Codifyrs apart, however, is their deep understanding of the sports domain. Whether it's analyzing performance data, building sports models, or working with real-time data feeds, their insight into the sports industry adds an extra layer of intelligence and context to their work. This rare combination of technical expertise and domain knowledge is incredibly valuable. I highly recommend Codifyrs for any project requiring advanced Python development, data scraping, or sports-related analytics. They are professional, reliable, and always go the extra mile to ensure success.",
       avatar: Fink,
     },
     {
@@ -38,25 +42,10 @@ const ReviewsSection = () => {
       name: "Carlos Gutierrez",
       role: "President, Beast Communications LLC",
       rating: 5,
-      review: "This testimonal confirms the services provided by Codifyrs. I have worked with their team for close to two years, and they have consistently proven to be a dependable and skilled partner. Communication has always been clear and proactive. If there were any delays, Codifyrs alerted me immediately. When scripts encountered issues—often due to external website changes—they were quick to adapt, update the code, and implement reliable workarounds, ensuring minimal disruption to operations. Beyond their technical capabilities, Codifyrs brings a strong sense of ownership to every task. They take the time to understand project goals, offer suggestions for improvement, and deliver scalable, efficient solutions that go beyond expectations. Their reliability, expertise in automation and data scraping, and commitment to quality make Codifyrs a trusted partner. I highly recommend them for any data-driven or backend development project where precision, speed, and accountability matter.",
-      avatar: Carlos
+      review:
+        "This testimonal confirms the services provided by Codifyrs. I have worked with their team for close to two years, and they have consistently proven to be a dependable and skilled partner. Communication has always been clear and proactive. If there were any delays, Codifyrs alerted me immediately. When scripts encountered issues—often due to external website changes—they were quick to adapt, update the code, and implement reliable workarounds, ensuring minimal disruption to operations. Beyond their technical capabilities, Codifyrs brings a strong sense of ownership to every task. They take the time to understand project goals, offer suggestions for improvement, and deliver scalable, efficient solutions that go beyond expectations. Their reliability, expertise in automation and data scraping, and commitment to quality make Codifyrs a trusted partner. I highly recommend them for any data-driven or backend development project where precision, speed, and accountability matter.",
+      avatar: Carlos,
     },
-    // {
-    //   id: 5,
-    //   name: "Lisa Wang",
-    //   role: "Product Manager, NextGen Solutions",
-    //   rating: 5,
-    //   review: "Outstanding work! The user experience they created for our platform is intuitive and beautiful. Our users love the new design.",
-    //   avatar: "LW"
-    // },
-    // {
-    //   id: 6,
-    //   name: "Robert Martinez",
-    //   role: "Owner, Local Business Co.",
-    //   rating: 5,
-    //   review: "CODIFYRS helped us go digital and reach more customers than ever before. Their SEO and digital marketing strategies have been incredibly effective.",
-    //   avatar: "RM"
-    // }
   ];
 
   const renderStars = (rating: number) => {
@@ -70,8 +59,26 @@ const ReviewsSection = () => {
     ));
   };
 
+  const handleCardEnter = (id: number) => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setHoveredReview(id);
+  };
+
+  const handleModalLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setHoveredReview(null);
+    }, 300); // Delay before closing
+  };
+
+  const handleModalEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+  };
+
   return (
-    <section id="reviews" className="py-20 bg-gradient-to-br from-background to-muted/30">
+    <section
+      id="reviews"
+      className="py-20 bg-gradient-to-br from-background to-muted/30"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -79,73 +86,73 @@ const ReviewsSection = () => {
             What Our <span className="text-primary">Clients Say</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our amazing clients have to say about working with us.
+            Don't just take our word for it. Here's what our amazing clients
+            have to say about working with us.
           </p>
         </div>
 
         {/* Reviews Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviews.map((review) => (
             <div
               key={review.id}
-              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/20 group flex flex-col"
+              onMouseEnter={() => handleCardEnter(review.id)}
+              onMouseLeave={() => {
+                timeoutRef.current = setTimeout(() => {
+                  setHoveredReview(null);
+                }, 300);
+              }}
+              className="relative group bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-border flex flex-col"
             >
-              {/* Quote Icon */}
               <div className="mb-6">
                 <Quote className="w-8 h-8 text-primary/60 group-hover:text-primary transition-colors" />
               </div>
-
-              {/* Rating */}
               <div className="flex items-center mb-4">
                 {renderStars(review.rating)}
               </div>
-
-              {/* Review Text */}
-              <p className="text-muted-foreground mb-6 leading-relaxed flex-grow">
-                "{review.review}"
-              </p>
-
-              {/* Client Info (Footer) */}
-              <div className="flex items-center pt-6 mt-auto border-t border-border">
-                {typeof review.avatar === "string" && review.avatar.includes(".jpg") ? (
-                  <img
-                    src={review.avatar}
-                    alt={review.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4 border border-border"
-                  />
-                ) : (
-                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-primary font-semibold text-sm">
-                      {review.avatar}
-                    </span>
-                  </div>
-                )}
-                <div>
-                  <h4 className="font-semibold text-foreground">{review.name}</h4>
-                  <p className="text-sm text-muted-foreground">{review.role}</p>
-                </div>
+              <div className="leading-relaxed mb-6 text-muted-foreground">
+                "{review.review.split(" ").slice(0, 80).join(" ")}..."
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-primary/5 rounded-2xl p-8 border border-primary/20">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Ready to Join Our Happy Clients?
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Let's create something amazing together and add your success story to our collection.
-            </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
+        {/* Hover Modal */}
+        {hoveredReview !== null && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
+            <div
+              className="bg-card rounded-2xl p-8 border border-border shadow-2xl max-w-4xl w-auto"
+              onMouseEnter={handleModalEnter}
+              onMouseLeave={handleModalLeave}
             >
-              Start Your Project
-            </a>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                "{
+                  reviews.find((r) => r.id === hoveredReview)?.review ??
+                  ""
+                }"
+              </p>
+              <div className="flex items-center pt-4 mt-auto border-t border-border">
+                <img
+                  src={
+                    reviews.find((r) => r.id === hoveredReview)?.avatar ?? ""
+                  }
+                  alt={
+                    reviews.find((r) => r.id === hoveredReview)?.name ?? ""
+                  }
+                  className="w-12 h-12 rounded-full object-cover mr-4 border border-border"
+                />
+                <div>
+                  <h4 className="font-semibold text-foreground">
+                    {reviews.find((r) => r.id === hoveredReview)?.name ?? ""}
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    {reviews.find((r) => r.id === hoveredReview)?.role ?? ""}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );
