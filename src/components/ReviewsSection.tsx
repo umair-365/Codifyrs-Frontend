@@ -1,13 +1,15 @@
-import { useState, useRef } from "react";
-import { Star, Quote } from "lucide-react";
+import { useState } from "react";
+import { Star, Quote, X } from "lucide-react";
 import Solomoon from "../assets/Solomoon image.jpg";
 import Yevgen from "../assets/yevgen image.jpg";
 import Fink from "../assets/Fink.jpg";
 import Carlos from "../assets/Carlos.jpg";
 
 const ReviewsSection = () => {
-  const [hoveredReview, setHoveredReview] = useState<number | null>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [modalReview, setModalReview] = useState<null | {
+    name: string;
+    review: string;
+  }>(null);
 
   const reviews = [
     {
@@ -59,101 +61,100 @@ const ReviewsSection = () => {
     ));
   };
 
-  const handleCardEnter = (id: number) => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setHoveredReview(id);
-  };
-
-  const handleModalLeave = () => {
-    timeoutRef.current = setTimeout(() => {
-      setHoveredReview(null);
-    }, 300); // Delay before closing
-  };
-
-  const handleModalEnter = () => {
-    if (timeoutRef.current) clearTimeout(timeoutRef.current);
-  };
-
   return (
-    <section
-      id="reviews"
-      className="py-20 bg-gradient-to-br from-background to-muted/30"
-    >
+    <section id="reviews" className="py-20 bg-gradient-to-br from-background to-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             What Our <span className="text-primary">Clients Say</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our amazing clients
-            have to say about working with us.
+            Don't just take our word for it. Here's what our amazing clients have to say about working with us.
           </p>
         </div>
 
-        {/* Reviews Grid */}
-        <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reviews.map((review) => (
-            <div
-              key={review.id}
-              onMouseEnter={() => handleCardEnter(review.id)}
-              onMouseLeave={() => {
-                timeoutRef.current = setTimeout(() => {
-                  setHoveredReview(null);
-                }, 300);
-              }}
-              className="relative group bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-border flex flex-col"
-            >
-              <div className="mb-6">
-                <Quote className="w-8 h-8 text-primary/60 group-hover:text-primary transition-colors" />
-              </div>
-              <div className="flex items-center mb-4">
-                {renderStars(review.rating)}
-              </div>
-              <div className="leading-relaxed mb-6 text-muted-foreground">
-                "{review.review.split(" ").slice(0, 80).join(" ")}..."
-              </div>
-            </div>
-          ))}
-        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+          {reviews.map((review) => {
+            const words = review.review.split(" ");
+            const showReadMore = words.length > 80;
+            const truncatedText = words.slice(0, 80).join(" ");
 
-        {/* Hover Modal */}
-        {hoveredReview !== null && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4">
-            <div
-              className="bg-card rounded-2xl p-8 border border-border shadow-2xl max-w-4xl w-auto"
-              onMouseEnter={handleModalEnter}
-              onMouseLeave={handleModalLeave}
-            >
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                "{
-                  reviews.find((r) => r.id === hoveredReview)?.review ??
-                  ""
-                }"
-              </p>
-              <div className="flex items-center pt-4 mt-auto border-t border-border">
-                <img
-                  src={
-                    reviews.find((r) => r.id === hoveredReview)?.avatar ?? ""
-                  }
-                  alt={
-                    reviews.find((r) => r.id === hoveredReview)?.name ?? ""
-                  }
-                  className="w-12 h-12 rounded-full object-cover mr-4 border border-border"
-                />
+            return (
+              <div
+                key={review.id}
+                className="bg-card rounded-2xl p-4 sm:p-6 shadow-lg border border-border flex flex-col justify-between transition-all duration-300 overflow-hidden min-h-[400px] sm:min-h-[500px] h-[420px] sm:h-[580px]"
+              >
                 <div>
-                  <h4 className="font-semibold text-foreground">
-                    {reviews.find((r) => r.id === hoveredReview)?.name ?? ""}
-                  </h4>
-                  <p className="text-sm text-muted-foreground">
-                    {reviews.find((r) => r.id === hoveredReview)?.role ?? ""}
+                  <div className="mb-4">
+                    <Quote className="w-7 h-7 text-primary/60" />
+                  </div>
+                  <div className="flex items-center mb-3">{renderStars(review.rating)}</div>
+                  <p
+                    className="leading-relaxed text-muted-foreground text-xs sm:text-base mb-3 sm:mb-4"
+                    style={{ wordBreak: "break-word" }}
+                  >
+                    "{truncatedText}..."
+                    {showReadMore && (
+                      <button
+                        type="button"
+                        onClick={() => setModalReview({ name: review.name, review: review.review })}
+                        className="text-primary font-medium text-xs sm:text-sm hover:underline ml-1 inline align-middle"
+                      >
+                        Read More
+                      </button>
+                    )}
                   </p>
                 </div>
+
+                <div className="flex items-center pt-4 border-t border-border mt-2">
+                  <img
+                    src={review.avatar}
+                    alt={review.name}
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4 border border-border"
+                  />
+                  <div>
+                    <h4 className="font-semibold text-foreground text-sm sm:text-base">{review.name}</h4>
+                    <p className="text-xs sm:text-sm text-muted-foreground">{review.role}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {modalReview && (
+        <div className="fixed inset-0 bg-black bg-opacity-60 z-50 px-4 py-12 flex justify-center items-center">
+          <div className="bg-white dark:bg-card w-full max-w-2xl p-6 rounded-xl relative text-sm sm:text-base max-h-[90vh] overflow-y-auto">
+            <button
+              className="absolute top-4 right-4 text-gray-500 hover:text-red-500"
+              onClick={() => setModalReview(null)}
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <p className="pt-10 text-muted-foreground leading-relaxed whitespace-pre-wrap">
+              {modalReview.review}
+            </p>
+
+            <div className="flex items-center pt-6 mt-6 border-t border-border">
+              <img
+                src={
+                  reviews.find((r) => r.name === modalReview.name)?.avatar || ""
+                }
+                alt={modalReview.name}
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4 border border-border"
+              />
+              <div>
+                <h4 className="font-semibold text-foreground text-sm sm:text-base">{modalReview.name}</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground">
+                  {reviews.find((r) => r.name === modalReview.name)?.role || "Client"}
+                </p>
               </div>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </section>
   );
 };
