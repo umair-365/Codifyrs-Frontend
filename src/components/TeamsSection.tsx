@@ -4,6 +4,8 @@ import member2 from "../assets/hussnain.jpg.jpg";
 import member3 from "../assets/muzmail.jpg.jpg";
 import member4 from "../assets/khubaib.jpg.png";
 import member5 from "../assets/member5.jpg.png";
+import member6 from "../assets/member6.png";
+
 
 
 const TeamsSection = () => {
@@ -62,10 +64,10 @@ const TeamsSection = () => {
     },
     {
       id: 5,
-      name: "Muhammad faizan",
+      name: "Muhammad Faizan",
       role: "Project Manager",
       bio: "Agile expert ensuring seamless project delivery. Certified Scrum Master with proven track record.",
-      image: "https://images.pexels.com/photos/9775435/pexels-photo-9775435.jpeg?auto=compress&cs=tinysrgb&h=400&fit=crop",
+      image: member6,
       skills: ["Agile", "Scrum", "Team Leadership"],
       // social: {
       //   linkedin: "#",
