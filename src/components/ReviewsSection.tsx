@@ -86,8 +86,8 @@ const ReviewsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
           {reviews.map((review) => {
             const words = review.review.split(" ");
-            const showReadMore = words.length > 80;
-            const truncatedText = words.slice(0, 80).join(" ");
+            const showReadMore = words.length > 100;
+            const truncatedText = words.slice(0, 100).join(" ");
 
             return (
               <div
