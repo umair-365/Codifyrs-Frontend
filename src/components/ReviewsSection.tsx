@@ -4,6 +4,7 @@ import Solomoon from "../assets/Solomoon image.jpg";
 import Yevgen from "../assets/yevgen image.jpg";
 import Fink from "../assets/Fink.jpg";
 import Carlos from "../assets/Carlos.jpg";
+import Durgadas from "../assets/Durgadas.jpg";
 
 const ReviewsSection = () => {
   const [modalReview, setModalReview] = useState<null | {
@@ -47,6 +48,15 @@ const ReviewsSection = () => {
       review:
         "This testimonal confirms the services provided by Codifyrs. I have worked with their team for close to two years, and they have consistently proven to be a dependable and skilled partner. Communication has always been clear and proactive. If there were any delays, Codifyrs alerted me immediately. When scripts encountered issues—often due to external website changes—they were quick to adapt, update the code, and implement reliable workarounds, ensuring minimal disruption to operations. Beyond their technical capabilities, Codifyrs brings a strong sense of ownership to every task. They take the time to understand project goals, offer suggestions for improvement, and deliver scalable, efficient solutions that go beyond expectations. Their reliability, expertise in automation and data scraping, and commitment to quality make Codifyrs a trusted partner. I highly recommend them for any data-driven or backend development project where precision, speed, and accountability matter.",
       avatar: Carlos,
+    },
+    {
+      id: 5,
+      name: "Durgadas Menon",
+      role: "Director, NVD Technology Services Pvt Ltd",
+      rating: 5,
+      review:
+        "Testimonal: Working with Codifyrs was an outstanding experience. They delivered a complete solution for our email marketing project, combining a powerful admin panel with seamless FastAPI integrations, a modern React frontend, and a robust MongoDB backend. The team not only understood our vision but also offered valuable suggestions that improved the overall functionality and user experience. Their technical expertise, clear communication, and commitment to quality were evident throughout the project. Thanks to Codifyrs, we now have a reliable and scalable platform that exceeded our expectations. I highly recommend them for any business looking for top-notch development services.",
+      avatar: Durgadas,
     },
   ];
 
