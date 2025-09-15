@@ -21,7 +21,7 @@ const TeamsSection = () => {
   {
     id: 2,
     name: "Muhammad Hussain",
-    role: "Python Developer",
+    role: "Sr. Python Developer",
     bio: "Full-stack Python developer passionate about building scalable web applications. Experienced in backend APIs and web scraping.",
     image: member2,
     skills: ["Python", "Django", "FastAPI", "AWS", "Scrapy", "Selenium", "REST API"],
