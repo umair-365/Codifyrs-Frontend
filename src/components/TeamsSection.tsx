@@ -1,107 +1,188 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
-import member1  from "../assets/umair.jpg.jpg";
+import member1  from "../assets/umair2.jpg.jpeg";
 import member2 from "../assets/hussnain.jpg.jpg";
 import member3 from "../assets/muzmail.jpg.jpg";
 import member4 from "../assets/khubaib.jpg.png";
 import member5 from "../assets/member5.jpg.png";
 import member6 from "../assets/member6.png";
-
+import person_logo from "../assets/SA.png";
 
 
 const TeamsSection = () => {
   const teamMembers = [
-    {
-      id: 1,
-      name: "Muhammad Umair Ansari",
-      role: "CEO & Founder",
-      bio: "Visionary leader with 10+ years in digital transformation. Former VP at leading tech companies.",
-      image: member1,
-      skills: ["Strategy", "Leadership", "Product Vision"],
-      // social: {
-      //   // linkedin: "#",
-      //   // twitter: "#",
-      //   // email: "sarah@flicken.io"
-      // }
-    },
-    {
-      id: 2,
-      name: "Muhammad Hussain",
-      role: "Python Developer",
-      bio: "Full-stack engineer passionate about creating scalable solutions. Expert in modern web technologies.",
-      image: member2,
-      skills: ["Django", "Fast API", "AWS","Scrapy","Selenium"],
-      // social: {
-      //   github: "#",
-      //   linkedin: "#",
-      //   email: "alex@flicken.io"
-      // }
-    },
-    {
-      id: 3,
-      name: "Saeed Anwar",
-      role: "Python Developer",
-      bio: "Creative director with expertise in user experience and visual design. Award-winning designer.",
-      image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=400&fit=crop",
-      skills: ["Data Scrapping", "Django", "Wordpress, Marketing"],
-      // social: {
-      //   linkedin: "#",
-      //   twitter: "#",
-      //   email: "maya@flicken.io"
-      // }
-    },
-    {
-      id: 4,
-      name: "Muhammad Umar Ansari",
-      role: "Tech Lead",
-      bio: "Architecture specialist focused on building robust, scalable systems. Open source contributor.",
-      image: member5,
-      skills: ["System Architecture", "DevOps", "Security"],
-      // social: {
-      //   // github: "#",
-      //   // linkedin: "#",
-      //   // email: "david@flicken.io"
-      // }
-    },
-    {
-      id: 5,
-      name: "Muhammad Faizan",
-      role: "Project Manager",
-      bio: "Agile expert ensuring seamless project delivery. Certified Scrum Master with proven track record.",
-      image: member6,
-      skills: ["Agile", "Scrum", "Team Leadership"],
-      // social: {
-      //   linkedin: "#",
-      //   email: "emily@flicken.io"
-      // }
-    },
-    {
-      id: 6,
-      name: "Muhammad Muzamil",
-      role: "Mobile Developer",
-      bio: "React Native specialist with expertise in iOS and Android development. Performance optimization guru.",
-      image: member3,
-      skills: [ "React JS", "React Native", "iOS", "Android"],
-      // social: {
-      //   github: "#",
-      //   linkedin: "#",
-      //   email: "marcus@flicken.io"
-      // }
-    },
-     {
-      id: 7,
-      name: "Muhammad Khubaib",
-      role: "Web Developer",
-      bio: "React JS specialist with expertise in Web and Android development. Performance optimization guru.",
-      image: member4,
-      skills: [ "React JS","React Native", "iOS", "Android"],
-      // social: {
-      //   github: "#",
-      //   linkedin: "#",
-      //   email: "marcus@flicken.io"
-      // }
-    }
+  {
+    id: 1,
+    name: "Muhammad Umair Ansari",
+    role: "CEO & Founder",
+    bio: "Visionary leader driving strategic growth and innovation across the organization. Experienced in tech leadership and product vision.",
+    image: member1,
+    skills: ["Strategy", "Leadership", "Product Vision", "Business Development", "Team Management"],
+  },
+  {
+    id: 2,
+    name: "Muhammad Hussain",
+    role: "Python Developer",
+    bio: "Full-stack Python developer passionate about building scalable web applications. Experienced in backend APIs and web scraping.",
+    image: member2,
+    skills: ["Python", "Django", "FastAPI", "AWS", "Scrapy", "Selenium", "REST API"],
+  },
+  {
+    id: 3,
+    name: "Saeed Anwar",
+    role: "Python Developer",
+    bio: "Python developer with strong expertise in data scraping, backend development, and web technologies. Focused on clean and maintainable code.",
+    image: person_logo,
+    skills: ["Python", "Scrapy", "Django", "Wordpress", "Data Scraping", "REST API"],
+  },
+  {
+    id: 4,
+    name: "Muhammad Umar Ansari",
+    role: "Python Developer",
+    bio: "Backend specialist building robust, scalable, and secure systems. Contributor to open source projects and modern web stacks.",
+    image: member5,
+    skills: ["Python", "Scrapy", "Selenium", "Requests", "REST API", "Django", "C++", "C"],
+  },
+  {
+    id: 5,
+    name: "Muhammad Faizan",
+    role: "Python Developer",
+    bio: "Agile Python developer delivering high-quality solutions. Experienced in full-stack development, web scraping, and cloud integration.",
+    image: member6,
+    skills: ["Python", "Scrapy", "Selenium", "Requests", "REST API", "Django", "C++", "C"],
+  },
+  {
+    id: 6,
+    name: "Muhammad Muzamil",
+    role: "Web Developer",
+    bio: "Front-end developer specializing in React Native and web technologies. Builds performant and responsive mobile and web apps.",
+    image: member3,
+    skills: ["React JS", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    id: 7,
+    name: "Muhammad Khubaib",
+    role: "Web Developer",
+    bio: "Front-end specialist with expertise in React JS and mobile app development. Focused on responsive and optimized UI/UX.",
+    image: member4,
+    skills: ["React JS", "JavaScript", "HTML", "CSS"],
+  }
+];
+//   const teamMembers = [
+//     {
+//       id: 1,
+//       name: "Muhammad Umair Ansari",
+//       role: "CEO & Founder",
+//       bio: "Visionary leader with 10+ years in digital transformation. Former VP at leading tech companies.",
+//       image: member1,
+//       skills: ["Strategy", "Leadership", "Product Vision"],
+//       // social: {
+//       //   // linkedin: "#",
+//       //   // twitter: "#",
+//       //   // email: "sarah@flicken.io"
+//       // }
+//     },
+//     {
+//       id: 2,
+//       name: "Muhammad Hussain",
+//       role: "Python Developer",
+//       bio: "Full-stack engineer passionate about creating scalable solutions. Expert in modern web technologies.",
+//       image: member2,
+//       skills: ["Django", "Fast API", "AWS","Scrapy","Selenium"],
+//       // social: {
+//       //   github: "#",
+//       //   linkedin: "#",
+//       //   email: "alex@flicken.io"
+//       // }
+//     },
+//     {
+//       id: 3,
+//       name: "Saeed Anwar",
+//       role: "Python Developer",
+//       bio: "Creative director with expertise in user experience and visual design. Award-winning designer.",
+//       image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=400&fit=crop",
+//       skills: ["Data Scrapping", "Django", "Wordpress, Marketing"],
+//       // social: {
+//       //   linkedin: "#",
+//       //   twitter: "#",
+//       //   email: "maya@flicken.io"
+//       // }
+//     },
+//     {
+//       id: 4,
+//       name: "Muhammad Umar Ansari",
+//       role: "Python Developer",
+//       bio: "Architecture specialist focused on building robust, scalable systems. Open source contributor.",
+//       image: member5,
+//       skills: [
+//     "Python",
+//     "Scrapy",
+//     "Selenium",
+//     "Requests",
+//     "REST API",
+//     "C++",
+//     "C",
+//     "React",
+//     "HTML",
+//     "CSS",
+//     "JavaScript"
+// ],
+//       // social: {
+//       //   // github: "#",
+//       //   // linkedin: "#",
+//       //   // email: "david@flicken.io"
+//       // }
+//     },
+//     {
+//       id: 5,
+//       name: "Muhammad Faizan",
+//       role: "Python Developer",
+//       bio: "Agile expert ensuring seamless project delivery. Certified Scrum Master with proven track record.",
+//       image: member6,
+//       skills: [
+//     "Python",
+//     "Scrapy",
+//     "Selenium",
+//     "Requests",
+//     "REST API",
+//     "C++",
+//     "C",
+//     "React",
+//     "HTML",
+//     "CSS",
+//     "JavaScript"],
+//       // social: {
+//       //   linkedin: "#",
+//       //   email: "emily@flicken.io"
+//       // }
+//     },
+//     {
+//       id: 6,
+//       name: "Muhammad Muzamil",
+//       role: "Web Developer",
+//       bio: "React Native specialist with expertise in iOS and Android development. Performance optimization guru.",
+//       image: member3,
+//       skills: [ "React JS", "React Native", "iOS", "Android"],
+//       // social: {
+//       //   github: "#",
+//       //   linkedin: "#",
+//       //   email: "marcus@flicken.io"
+//       // }
+//     },
+//      {
+//       id: 7,
+//       name: "Muhammad Khubaib",
+//       role: "Web Developer",
+//       bio: "React JS specialist with expertise in Web and Android development. Performance optimization guru.",
+//       image: member4,
+//       skills: [ "React JS","React Native", "iOS", "Android"],
+//       // social: {
+//       //   github: "#",
+//       //   linkedin: "#",
+//       //   email: "marcus@flicken.io"
+//       // }
+//     }
     
-  ];
+//   ];
 
   const getSocialIcon = (platform: string) => {
     switch (platform) {
