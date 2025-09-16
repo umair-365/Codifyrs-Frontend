@@ -15,6 +15,7 @@ import Career from "./pages/Career";
 
 // subpages
 import Betalyzer from "./pages/sub_pages/Betalyzer"
+import Emailmarket from "./pages/sub_pages/Emailmarket"
 
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -38,6 +39,7 @@ const App = () => (
             <Route path="/contact" element={<Contact />} />
             <Route path="/career" element={<Career />} />
             <Route path="/portfolio/betalyzer" element={<Betalyzer />} />
+            <Route path="/portfolio/email_market" element={<Emailmarket />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

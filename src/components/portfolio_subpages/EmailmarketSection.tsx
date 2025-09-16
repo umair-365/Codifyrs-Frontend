@@ -1,27 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
-import portfolio1 from "@/assets/portfolio_assets/betalyzer.png";
-import portfolio2 from "@/assets/portfolio_assets/betalyzer1.png";
-import portfolio3 from "@/assets/portfolio_assets/betalyzer2.png";
-import portfolio4 from "@/assets/portfolio_assets/betalyzer3.png";
+import portfolio1 from "@/assets/portfolio_assets/email_market.png";
+import portfolio2 from "@/assets/portfolio_assets/email_market1.png";
+import portfolio3 from "@/assets/portfolio_assets/email_market2.png";
+import portfolio4 from "@/assets/portfolio_assets/email_market3.png";
+import portfolio5 from "@/assets/portfolio_assets/email_market4.png";
 
-const BetalyzerSection = () => {
+const EmailmarketSection = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
 
   // Single project data
   const project = {
-    id: 1,
-    name: "BetAlyzer",
+    id: 2,
+    name: "Email Market App",
     description:
-      "Betalyzer is a comprehensive online platform designed for users and enthusiasts to compare real-time odds from multiple bookmakers, track line movements, and access detailed match statistics. It provides live scores, historical data empowering users to identify value bets and make smarter betting decisions with greater accuracy.",
+      "This email marketing application is designed to help businesses engage with their customers more effectively by sending personalized campaigns through multiple company email accounts. It streamlines bulk email delivery, manages different sender profiles, and ensures high deliverability with proper tracking and reporting. With features like domain-based sending, account management, and audience segmentation, the app provides flexibility for businesses to run campaigns from different companies while maintaining brand identity and improving customer reach.",
     images: [
       portfolio1,
       portfolio2,
       portfolio3,
-      portfolio4
+      portfolio4,
+      portfolio5
     ],
-    techStack: ["React", "Node.js","Django API" ,"MongoDB", "Stripe", "AWS", "Docker", "Web scraping"],
+    techStack: ["React", "Django API", "Sendgrid" ,"MongoDB", "AWS"],
   };
 
   useEffect(() => {
@@ -151,4 +153,4 @@ const BetalyzerSection = () => {
   );
 };
 
-export default BetalyzerSection;
+export default EmailmarketSection;

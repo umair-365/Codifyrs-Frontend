@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import portfolio1 from "@/assets/portfolio_assets/betalyzer.png";
-import portfolio2 from "@/assets/portfolio-2.jpg";
+import portfolio2 from "@/assets/portfolio_assets/email_market.png";
 import portfolio3 from "@/assets/portfolio-3.jpg";
 
 const PortfolioSection = () => {
@@ -13,22 +13,22 @@ const PortfolioSection = () => {
   const projects = [
     {
       id: 1,
-      title: "Betalyzer",
+      title: "BetAlyzer",
       description: "Betalyzer is a sports odds comparison platform that helps users find the best betting value in real time.",
       image: portfolio1,
       category: "Web Apps",
       technologies: ["React", "Node.js","Django API" ,"MongoDB", "Stripe", "AWS", "Docker"],
       liveUrl: "/portfolio/betalyzer",
-      githubUrl: "#"
+      // githubUrl: "#"
     },
     {
       id: 2,
-      title: "E-commerce Mobile App",
-      description: "A feature-rich mobile shopping application with seamless user experience and advanced filtering capabilities.",
+      title: "Email Market App",
+      description: "An email marketing app that lets you send targeted emails to customers using multiple company accounts seamlessly.",
       image: portfolio2,
-      category: "Mobile Apps",
-      technologies: ["React Native", "Redux", "Firebase", "Stripe"],
-      liveUrl: "#",
+      category: "Web Apps",
+      technologies: ["React", "Django API", "Sendgrid" ,"MongoDB", "AWS"],
+      liveUrl: "/portfolio/email_market",
       githubUrl: "#"
     },
     {
@@ -133,12 +133,7 @@ const PortfolioSection = () => {
                   >
                     <ExternalLink className="w-5 h-5 text-primary" />
                   </a>
-                  <a
-                    href={project.githubUrl}
-                    className="w-10 h-10 bg-background rounded-full flex items-center justify-center hover:scale-110 transition-transform"
-                  >
-                    <Github className="w-5 h-5 text-primary" />
-                  </a>
+                  
                 </div>
               </div>
 
@@ -170,10 +165,7 @@ const PortfolioSection = () => {
                   ))}
                 </div>
                 
-                <Button variant="ghost" size="sm" className="group/btn p-0 h-auto font-medium text-primary hover:text-primary">
-                  View Details
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
+                
               </div>
             </div>
           ))}

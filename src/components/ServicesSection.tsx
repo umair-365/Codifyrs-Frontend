@@ -16,11 +16,11 @@ const ServicesSection = () => {
       icon: Code,
       title: "Web Development",
       description: "Custom web applications built with modern technologies and best practices for optimal performance.",
-      features: ["React & Next.js", "D Jango", "Node.js Backend", "Database Design", "API Integration"]
+      features: ["React & Next.js", "DJango", "Node.js Backend", "Database Design", "API Integration", "CI/CD Integration"]
     },
     {
       icon: Network,
-      title: " Scrapping",
+      title: "Web Scrapping",
       description: "Get real-time, structured data from any website with our efficient and secure scraping solutions.",
       features: ["Real-Time Data Extraction", "Customizable Scraping", "High-Speed Performance", "Scalable Solutions", " Multi-Source Scraping", "Ongoing Support"]
     },
@@ -28,7 +28,7 @@ const ServicesSection = () => {
       icon: Sliders,
       title: " Selenium Automation",
       description: "Selenium Automation enables fast, reliable browser testing and interaction through scripted control, helping teams streamline QA, detect bugs early, and ensure cross-browser compatibility.",
-      features: ["Cross-Browser Testing", "Headless Execution", "DOM Interaction", "Form Filling", "Screenshot Capture", "Real-Time Monitoring", "Custom Test Scripts", "Parallel Execution", "Data Extraction", "CI/CD Integration"]
+      features: ["Cross-Browser Testing", "Headless Execution", "DOM Interaction", "Form Filling", "Screenshot Capture", "Real-Time Monitoring", "Custom Test Scripts", "Parallel Execution", "Data Extraction"]
     },
     {
       icon: Globe,
@@ -40,7 +40,7 @@ const ServicesSection = () => {
       icon: Rocket,
       title: "Product Launch",
       description: "End-to-end product development from ideation to successful market launch.",
-      features: ["MVP Development", "Market Testing", "Launch Strategy", "Post-Launch Support"]
+      features: ["MVP Development", "Market Testing", "Launch Strategy", "Post-Launch Support", "CI/CD Integration"]
     },
     // {
     //   icon: Users,
