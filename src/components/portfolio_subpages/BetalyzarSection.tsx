@@ -64,26 +64,27 @@ const BetalyzerSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Slider Section */}
           <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl border border-border p-1 w-full h-[400px] object-cover rounded-2xl">
-              <div className="relative h-96 md:h-[500px] bg-muted rounded-xl overflow-hidden">
-                <div className="w-full h-full relative">
+            <div className="relative overflow-hidden rounded-2xl border border-border p-1">
+              <div className="relative bg-muted rounded-xl overflow-hidden" style={{ minHeight: '400px' }}>
+                <div className="w-full h-full relative flex items-center justify-center">
                   <img
                     src={project.images[currentImageIndex]}
                     alt={`${project.name} - Image ${currentImageIndex + 1}`}
-                    className="w-full h-full object-cover transition-all duration-700 ease-in-out w-full h-[400px] object-cover rounded-2xl"
+                    className="max-w-full max-h-full object-contain transition-all duration-700 ease-in-out rounded-xl"
+                    style={{ maxHeight: '500px', width: 'auto', height: 'auto' }}
                   />
                 </div>
 
                 {/* Image Navigation Arrows */}
                 <button
                   onClick={prevImage}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 hover:bg-black/60 transition-all duration-300 text-white"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 hover:bg-black/60 transition-all duration-300 text-white z-10"
                 >
                   <ChevronLeft size={24} />
                 </button>
                 <button
                   onClick={nextImage}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 hover:bg-black/60 transition-all duration-300 text-white"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 hover:bg-black/60 transition-all duration-300 text-white z-10"
                 >
                   <ChevronRight size={24} />
                 </button>
@@ -91,13 +92,13 @@ const BetalyzerSection = () => {
                 {/* Auto-play control */}
                 <button
                   onClick={() => setIsAutoPlay(!isAutoPlay)}
-                  className="absolute top-4 right-4 p-3 rounded-full bg-black/40 hover:bg-black/60 transition-all duration-300 text-white"
+                  className="absolute top-4 right-4 p-3 rounded-full bg-black/40 hover:bg-black/60 transition-all duration-300 text-white z-10"
                 >
                   {isAutoPlay ? <Pause size={20} /> : <Play size={20} />}
                 </button>
 
                 {/* Image indicators */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
                   {project.images.map((_, index) => (
                     <button
                       key={index}
