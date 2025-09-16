@@ -23,7 +23,7 @@ const EmailmarketSection = () => {
       portfolio4,
       portfolio5
     ],
-    techStack: ["React", "Django API", "Sendgrid" ,"MongoDB", "AWS"],
+    techStack: ["React", "Django API", "Sendgrid" ,"MongoDB", "AWS", "GIT"],
   };
 
   useEffect(() => {

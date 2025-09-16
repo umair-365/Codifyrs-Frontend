@@ -22,7 +22,7 @@ const RealestateSection = () => {
       portfolio3,
       portfolio4
     ],
-    techStack: ["PostgreSQL", "Scrapy", "Translation Modules", "Cron Jobs / Scheduled Scripts", "smtp"],
+    techStack: ["PostgreSQL", "Scrapy","Requests", "Translation Modules", "Cron Jobs / Scheduled Scripts", "SMTP", "Proxies", "GIT"],
   };
 
   useEffect(() => {

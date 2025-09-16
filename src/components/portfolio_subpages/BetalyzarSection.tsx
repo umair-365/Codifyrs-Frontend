@@ -21,7 +21,7 @@ const BetalyzerSection = () => {
       portfolio3,
       portfolio4
     ],
-    techStack: ["React", "Node.js","Django API" ,"MongoDB", "Stripe", "AWS", "Docker", "Web scraping"],
+    techStack: ["React", "Node.js","Django API" ,"MongoDB", "Stripe", "AWS", "Docker", "Web Scraping", "GIT"],
   };
 
   useEffect(() => {

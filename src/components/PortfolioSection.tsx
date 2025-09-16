@@ -18,7 +18,7 @@ const PortfolioSection = () => {
       description: "Betalyzer is a sports odds comparison platform that helps users find the best betting value in real time.",
       image: portfolio1,
       category: "Web Apps",
-      technologies: ["React", "Node.js","Django API" ,"MongoDB", "Stripe", "AWS", "Docker"],
+      technologies: ["React", "Node.js","Django API" ,"MongoDB", "Stripe", "AWS", "Docker", "Web Scraping", "GIT"],
       liveUrl: "/portfolio/betalyzer",
       // githubUrl: "#"
     },
@@ -28,17 +28,17 @@ const PortfolioSection = () => {
       description: "An email marketing app that lets you send targeted emails to customers using multiple company accounts seamlessly.",
       image: portfolio2,
       category: "Web Apps",
-      technologies: ["React", "Django API", "Sendgrid" ,"MongoDB", "AWS"],
+      technologies: ["React", "Django API", "Sendgrid" ,"MongoDB", "AWS", "GIT"],
       liveUrl: "/portfolio/email_market",
       githubUrl: "#"
     },
     {
       id: 3,
-      title: "Betting sites scrapping system",
+      title: "Betting Sites Scrapping System",
       description: "A centralized sports data platform that scrapes multiple betting and score websites, processes the information, and stores it in MongoDB with high efficiency using Redis, SNS, SQS, Scrapyd, and CloudWatch.",
       image: portfolio3,
       category: "Scraping & Automation",
-      technologies:  ["Redis", "MongoDB", "SNS", "SQS", "Scrapyd", "CloudWatch", "Scrapy"],
+      technologies:  ["Redis", "MongoDB", "SNS", "SQS", "Scrapyd", "CloudWatch", "Scrapy", "Porxies", "GIT"],
       liveUrl: "/portfolio/betting_system",
       githubUrl: "#"
     },
@@ -48,7 +48,7 @@ const PortfolioSection = () => {
       description: "A smart real estate data platform that scrapes, translates, and centralizes property listings for rent and sale, saves them in PostgreSQL, and sends daily email reports on successful and failed crawls.",
       image: portfolio4,
       category: "Scraping & Automation",
-      technologies: ["PostgreSQL", "Scrapy", "Translation Modules", "Cron Jobs / Scheduled Scripts", "smtp"],
+      technologies: ["PostgreSQL", "Scrapy","Requests", "Translation Modules", "Cron Jobs / Scheduled Scripts", "SMTP", "Proxies", "GIT"],
       liveUrl: "/portfolio/realestate_scrapper",
       githubUrl: "#"
     },
