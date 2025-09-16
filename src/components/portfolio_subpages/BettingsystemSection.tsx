@@ -14,8 +14,31 @@ const BettingsystemSection = () => {
   const project = {
     id: 3,
     name: "Betting sites scrapping system",
-    description:
-      "Our system is built to aggregate and centralize sports data from leading betting and score platforms including Oddest, Unibet, Sportsbet, Tipico, Draftking, Bovada, Gtbets, Mybookie, Fanduel, Betfair, Bewin, Flashscore, Sofascore, Oddsportal, Sbobet, Veikkaus, and Nubet. The data is collected through a robust scraping mechanism, standardized to ensure consistency, and stored in MongoDB for reliable access. To enhance performance and scalability, we use Redis for caching, SNS & SQS for event-driven messaging and task management, Scrapyd for distributed crawling, and CloudWatch for monitoring. This ensures a seamless, fault-tolerant pipeline that delivers clean and unified match data from multiple sources into a single document, avoiding any conflicts or duplication.",
+    description: `
+    Our system is built to aggregate and centralize sports data from leading betting and score platforms including:
+    <ul class="list-disc ml-6 mt-2 space-y-1 grid  lg:grid-cols-3 gap-6 items-center">
+      <li>Oddest</li>
+      <li>Unibet</li>
+      <li>Sportsbet</li>
+      <li>Tipico</li>
+      <li>Draftking</li>
+      <li>Bovada</li>
+      <li>Gtbets</li>
+      <li>Mybookie</li>
+      <li>Fanduel</li>
+      <li>Betfair</li>
+      <li>Bewin</li>
+      <li>Flashscore</li>
+      <li>Sofascore</li>
+      <li>Oddsportal</li>
+      <li>Sbobet</li>
+      <li>Veikkaus</li>
+      <li>Nubet</li>
+    </ul>
+    The data is collected through a robust scraping mechanism, standardized to ensure consistency, and stored in MongoDB for reliable access.
+    To enhance performance and scalability, we use Redis for caching, SNS & SQS for event-driven messaging and task management, Scrapyd for distributed crawling, and CloudWatch for monitoring.
+    This ensures a seamless, fault-tolerant pipeline that delivers clean and unified match data from multiple sources into a single document, avoiding any conflicts or duplication.
+  `,
     images: [
       portfolio1,
       portfolio2,
@@ -126,9 +149,14 @@ const BettingsystemSection = () => {
               <div className="w-24 h-1 bg-foreground rounded-full" />
             </div>
 
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            {/* <p className="text-muted-foreground text-lg leading-relaxed">
               {project.description}
-            </p>
+            </p> */}
+            {/* Project Description */}
+            <div
+              className="text-muted-foreground text-lg leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: project.description }}
+            />
 
             {/* Tech Stack */}
             <div>

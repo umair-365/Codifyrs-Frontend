@@ -14,8 +14,29 @@ const RealestateSection = () => {
   const project = {
     id: 4,
     name: "Global Real Estate Data Scraper",
-    description:
-      "We have developed a robust system to scrape and formalize real estate data from leading property websites including HouseSigma, Realtor, Redfin, Imobilaire, Ingatlan, Ingatlanok, Storia, Zillow, Lajumate, Zoopla, ingatlanok, ingatlanbazar, ingatlan_jofogas, ingatlan, imobiliare, and lajumate. The collected data is standardized and stored in PostgreSQL, ensuring consistency and reliability. To manage multilingual sources such as Romanian, Hungarian, and others, the system integrates translation modules that unify property details across languages. The pipeline is designed to first fetch historic data and then perform daily scheduled scrapes for both rentals and sales. To maintain data quality, we’ve added an email notifier that automatically monitors daily crawls and sends reports containing the number of successful and failed records, ensuring full transparency and timely monitoring of the scraping process.",
+    description: `
+  We have developed a comprehensive system to scrape and formalize real estate data from leading property websites including:
+  <ul class="list-disc ml-6 mt-2 space-y-1 grid  lg:grid-cols-3 gap-6 items-center">
+    <li>HouseSigma</li>
+    <li>Realtor</li>
+    <li>Redfin</li>
+    <li>Imobilaire</li>
+    <li>Ingatlan</li>
+    <li>Ingatlanok</li>
+    <li>Storia</li>
+    <li>Zillow</li>
+    <li>Lajumate</li>
+    <li>Zoopla</li>
+    <li>ingatlanok</li>
+    <li>ingatlanbazar</li>
+    <li>ingatlan_jofogas</li>
+    <li>ingatlan</li>
+    <li>imobiliare</li>
+    <li>lajumate</li>
+  </ul>
+  All collected data is standardized and stored in PostgreSQL to ensure consistency and reliability. To handle multilingual sources such as Romanian, Hungarian, and others, the system integrates translation modules that automatically unify property details across languages. The pipeline is designed to fetch historic data once and then continue with daily scheduled scrapes for both rentals and sales. To maintain data accuracy and transparency, we’ve integrated an email notifier that monitors daily crawls and sends detailed reports highlighting the number of successful and failed records, ensuring proactive monitoring and quick issue detection.
+`,
+
     images: [
       portfolio1,
       portfolio2,
@@ -125,10 +146,14 @@ const RealestateSection = () => {
               <div className="w-24 h-1 bg-foreground rounded-full" />
             </div>
 
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            {/* <p className="text-muted-foreground text-lg leading-relaxed">
               {project.description}
-            </p>
-
+            </p> */}
+            {/* Project Description */}
+            <div
+              className="text-muted-foreground text-lg leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: project.description }}
+            />
             {/* Tech Stack */}
             <div>
               <h3 className="text-2xl font-semibold text-foreground mb-4">

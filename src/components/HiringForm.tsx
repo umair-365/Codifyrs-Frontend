@@ -32,10 +32,6 @@ const HiringForm: React.FC = () => {
     <h4 className="font-semibold dark:text-white mb-1">We’re Looking For:</h4>
     <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
       <li>Frontend &amp; Backend Developers (React, Django, Node.js, etc.)</li>
-      <li>Mobile App Developers (Flutter, React Native)</li>
-      <li>UI/UX Designers with creative flair</li>
-      <li>Project Managers &amp; QA Engineers</li>
-      <li>Digital Marketing &amp; SEO Experts</li>
       <li>Fresh graduates with strong portfolios are also encouraged to apply</li>
     </ul>
 

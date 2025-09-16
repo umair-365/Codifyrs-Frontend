@@ -112,7 +112,7 @@ const Footer = () => {
       </div>
 
       {/* Newsletter Section */}
-      <div className="border-t border-border">
+      {/* <div className="border-t border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold mb-4">Stay updated with our latest insights</h3>
@@ -130,7 +130,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Bottom Footer */}
       <div className="border-t border-border">
