@@ -1,0 +1,155 @@
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
+import portfolio1 from "@/assets/portfolio_assets/realestate.png";
+import portfolio2 from "@/assets/portfolio_assets/realestate1.png";
+import portfolio3 from "@/assets/portfolio_assets/realestate2.png";
+import portfolio4 from "@/assets/portfolio_assets/realestate3.png";
+
+
+const RealestateSection = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
+
+  // Single project data
+  const project = {
+    id: 4,
+    name: "Global Real Estate Data Scraper",
+    description:
+      "We have developed a robust system to scrape and formalize real estate data from leading property websites including HouseSigma, Realtor, Redfin, Imobilaire, Ingatlan, Ingatlanok, Storia, Zillow, Lajumate, Zoopla, ingatlanok, ingatlanbazar, ingatlan_jofogas, ingatlan, imobiliare, and lajumate. The collected data is standardized and stored in PostgreSQL, ensuring consistency and reliability. To manage multilingual sources such as Romanian, Hungarian, and others, the system integrates translation modules that unify property details across languages. The pipeline is designed to first fetch historic data and then perform daily scheduled scrapes for both rentals and sales. To maintain data quality, we’ve added an email notifier that automatically monitors daily crawls and sends reports containing the number of successful and failed records, ensuring full transparency and timely monitoring of the scraping process.",
+    images: [
+      portfolio1,
+      portfolio2,
+      portfolio3,
+      portfolio4
+    ],
+    techStack: ["PostgreSQL", "Scrapy", "Translation Modules", "Cron Jobs / Scheduled Scripts", "smtp"],
+  };
+
+  useEffect(() => {
+    if (isAutoPlay) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prev) =>
+          prev === project.images.length - 1 ? 0 : prev + 1
+        );
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [project.images.length, isAutoPlay]);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === project.images.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) =>
+      prev === 0 ? project.images.length - 1 : prev - 1
+    );
+  };
+
+  return (
+    <div className="min-h-screen bg-background p-6">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-4">
+            Featured Project
+          </h1>
+          <p className="text-muted-foreground text-xl">
+            Empowering the Innovations
+          </p>
+        </div>
+
+        {/* Main Content */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Image Slider Section */}
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-2xl border border-border p-1">
+              <div className="relative bg-muted rounded-xl overflow-hidden" style={{ minHeight: '400px' }}>
+                <div className="w-full h-full relative flex items-center justify-center">
+                  <img
+                    src={project.images[currentImageIndex]}
+                    alt={`${project.name} - Image ${currentImageIndex + 1}`}
+                    className="max-w-full max-h-full object-contain transition-all duration-700 ease-in-out rounded-xl"
+                    style={{ maxHeight: '500px', width: 'auto', height: '400px' }}
+                  />
+                </div>
+
+                {/* Image Navigation Arrows */}
+                <button
+                  onClick={prevImage}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 hover:bg-black/60 transition-all duration-300 text-white z-10"
+                >
+                  <ChevronLeft size={24} />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/40 hover:bg-black/60 transition-all duration-300 text-white z-10"
+                >
+                  <ChevronRight size={24} />
+                </button>
+
+                {/* Auto-play control */}
+                <button
+                  onClick={() => setIsAutoPlay(!isAutoPlay)}
+                  className="absolute top-4 right-4 p-3 rounded-full bg-black/40 hover:bg-black/60 transition-all duration-300 text-white z-10"
+                >
+                  {isAutoPlay ? <Pause size={20} /> : <Play size={20} />}
+                </button>
+
+                {/* Image indicators */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+                  {project.images.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === currentImageIndex
+                          ? "bg-white scale-125"
+                          : "bg-white/50 hover:bg-white/75"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Project Details Section */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 leading-tight text-primary">
+                {project.name}
+              </h2>
+              <div className="w-24 h-1 bg-foreground rounded-full" />
+            </div>
+
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              {project.description}
+            </p>
+
+            {/* Tech Stack */}
+            <div>
+              <h3 className="text-2xl font-semibold text-foreground mb-4">
+                Tech Stack
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {project.techStack.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="px-4 py-2 bg-background text-foreground rounded-full border border-border hover:border-primary/40 transition-all duration-300 cursor-default font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RealestateSection;

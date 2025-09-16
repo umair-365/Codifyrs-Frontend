@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import portfolio1 from "@/assets/portfolio_assets/betalyzer.png";
 import portfolio2 from "@/assets/portfolio_assets/email_market.png";
-import portfolio3 from "@/assets/portfolio-3.jpg";
+import portfolio3 from "@/assets/portfolio_assets/betting.png";
+import portfolio4 from "@/assets/portfolio_assets/realestate3.png";
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -33,44 +34,44 @@ const PortfolioSection = () => {
     },
     {
       id: 3,
-      title: "Corporate Website",
-      description: "A modern corporate website with responsive design, optimized for performance and search engine visibility.",
+      title: "Betting sites scrapping system",
+      description: "A centralized sports data platform that scrapes multiple betting and score websites, processes the information, and stores it in MongoDB with high efficiency using Redis, SNS, SQS, Scrapyd, and CloudWatch.",
       image: portfolio3,
-      category: "Web Apps",
-      technologies: ["Next.js", "Tailwind CSS", "Prisma", "PostgreSQL"],
-      liveUrl: "#",
+      category: "Scraping & Automation",
+      technologies:  ["Redis", "MongoDB", "SNS", "SQS", "Scrapyd", "CloudWatch", "Scrapy"],
+      liveUrl: "/portfolio/betting_system",
       githubUrl: "#"
     },
     {
       id: 4,
-      title: "SaaS Platform",
-      description: "A scalable software-as-a-service platform for project management with team collaboration features.",
-      image: portfolio1,
-      category: "SaaS",
-      technologies: ["Vue.js", "Laravel", "MySQL", "Redis"],
-      liveUrl: "#",
+      title: "Global Real Estate Data Scraper",
+      description: "A smart real estate data platform that scrapes, translates, and centralizes property listings for rent and sale, saves them in PostgreSQL, and sends daily email reports on successful and failed crawls.",
+      image: portfolio4,
+      category: "Scraping & Automation",
+      technologies: ["PostgreSQL", "Scrapy", "Translation Modules", "Cron Jobs / Scheduled Scripts", "smtp"],
+      liveUrl: "/portfolio/realestate_scrapper",
       githubUrl: "#"
     },
-    {
-      id: 5,
-      title: "Online Marketplace",
-      description: "A multi-vendor marketplace platform connecting buyers and sellers with secure payment processing.",
-      image: portfolio2,
-      category: "E-commerce",
-      technologies: ["React", "Express.js", "MongoDB", "PayPal API"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      id: 6,
-      title: "Fitness Tracking App",
-      description: "A comprehensive fitness application with workout tracking, nutrition planning, and social features.",
-      image: portfolio3,
-      category: "Mobile Apps",
-      technologies: ["Flutter", "Dart", "Firebase", "Health Kit"],
-      liveUrl: "#",
-      githubUrl: "#"
-    }
+    // {
+    //   id: 5,
+    //   title: "Online Marketplace",
+    //   description: "A multi-vendor marketplace platform connecting buyers and sellers with secure payment processing.",
+    //   image: portfolio2,
+    //   category: "E-commerce",
+    //   technologies: ["React", "Express.js", "MongoDB", "PayPal API"],
+    //   liveUrl: "#",
+    //   githubUrl: "#"
+    // },
+    // {
+    //   id: 6,
+    //   title: "Fitness Tracking App",
+    //   description: "A comprehensive fitness application with workout tracking, nutrition planning, and social features.",
+    //   image: portfolio3,
+    //   category: "Mobile Apps",
+    //   technologies: ["Flutter", "Dart", "Firebase", "Health Kit"],
+    //   liveUrl: "#",
+    //   githubUrl: "#"
+    // }
   ];
 
   const filteredProjects = activeCategory === "All" 
