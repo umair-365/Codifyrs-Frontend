@@ -16,7 +16,7 @@ const BettingsystemSection = () => {
     name: "Betting Sites Scrapping System",
     description: `
     Our system is built to aggregate and centralize sports data from leading betting and score platforms including:
-    <ul class="list-disc ml-6 mt-2 space-y-1 grid  lg:grid-cols-3 gap-6 items-center">
+    <ul class="list-disc ml-6 mt-2 space-y-1 grid  lg:grid-cols-3 items-center">
       <li>Oddest</li>
       <li>Unibet</li>
       <li>Sportsbet</li>

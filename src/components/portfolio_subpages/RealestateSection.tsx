@@ -16,7 +16,7 @@ const RealestateSection = () => {
     name: "Global Real Estate Data Scraper",
     description: `
   We have developed a comprehensive system to scrape and formalize real estate data from leading property websites including:
-  <ul class="list-disc ml-6 mt-2 space-y-1 grid  lg:grid-cols-3 gap-6 items-center">
+  <ul class="list-disc ml-6 mt-2 space-y-1 grid  lg:grid-cols-3 items-center">
     <li>HouseSigma</li>
     <li>Realtor</li>
     <li>Redfin</li>
