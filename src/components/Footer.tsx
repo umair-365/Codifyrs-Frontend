@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Zap, Mail, Phone, MapPin, Github, Twitter, Linkedin } from "lucide-react";
+import { Zap, Mail, Phone, MapPin, Github, Twitter, Linkedin, Facebook } from "lucide-react";
 import codifyrsLogo from "@/assets/C icon.png";
 import { Link } from "react-router-dom";
 
@@ -9,11 +9,11 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        <a href="#services" className="text-muted-foreground hover:text-primary transition-colors text-sm">Web Development</a>,
-        <a href="#services" className="text-muted-foreground hover:text-primary transition-colors text-sm">Scraping</a>,
-        <a href="#services" className="text-muted-foreground hover:text-primary transition-colors text-sm">Selenium Automation</a>,
-        <a href="#services" className="text-muted-foreground hover:text-primary transition-colors text-sm">Python Scripting</a>,
-        <a href="#services" className="text-muted-foreground hover:text-primary transition-colors text-sm">Product Launch</a>
+        <a href="/services" className="text-muted-foreground hover:text-primary transition-colors text-sm">Web Development</a>,
+        <a href="/services" className="text-muted-foreground hover:text-primary transition-colors text-sm">Scraping</a>,
+        <a href="/services" className="text-muted-foreground hover:text-primary transition-colors text-sm">Selenium Automation</a>,
+        <a href="/services" className="text-muted-foreground hover:text-primary transition-colors text-sm">Python Scripting</a>,
+        <a href="/services" className="text-muted-foreground hover:text-primary transition-colors text-sm">Product Launch</a>
       ]
     },
     {
@@ -27,23 +27,24 @@ const Footer = () => {
         { name: "Careers", to: "/career" }
       ]
     },
-    {
-      title: "Resources",
-      links: [
-        "Documentation",
-        "Help Center",
-        "Privacy Policy",
-        "Terms of Service",
-        "Cookie Policy",
-        "Sitemap"
-      ]
-    }
+    // {
+    //   title: "Resources",
+    //   links: [
+    //     "Documentation",
+    //     "Help Center",
+    //     "Privacy Policy",
+    //     "Terms of Service",
+    //     "Cookie Policy",
+    //     "Sitemap"
+    //   ]
+    // }
   ];
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" }
+    // { icon: Github, href: "#", label: "GitHub" },
+    // { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/codifyrs", label: "LinkedIn" },
+    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61580522647657", label: "Facebook" },
   ];
 
   return (

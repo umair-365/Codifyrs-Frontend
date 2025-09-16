@@ -13,6 +13,9 @@ import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import Career from "./pages/Career";
 
+// subpages
+import Betalyzer from "./pages/sub_pages/Betalyzer"
+
 import ScrollToTop from "@/components/ScrollToTop";
 
 
@@ -34,6 +37,7 @@ const App = () => (
             <Route path="/reviews" element={<Reviews />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/career" element={<Career />} />
+            <Route path="/portfolio/betalyzer" element={<Betalyzer />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

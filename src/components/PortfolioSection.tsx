@@ -1,24 +1,24 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
-import portfolio1 from "@/assets/portfolio-1.jpg";
+import portfolio1 from "@/assets/portfolio_assets/betalyzer.png";
 import portfolio2 from "@/assets/portfolio-2.jpg";
 import portfolio3 from "@/assets/portfolio-3.jpg";
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const categories = ["All", "Web Apps", "Mobile Apps", "E-commerce", "SaaS"];
+  const categories = ["All", "Web Apps", "Scraping & Automation"];
 
   const projects = [
     {
       id: 1,
-      title: "Analytics Dashboard",
-      description: "A comprehensive analytics platform that helps businesses track and visualize their key performance metrics in real-time.",
+      title: "Betalyzer",
+      description: "Betalyzer is a sports odds comparison platform that helps users find the best betting value in real time.",
       image: portfolio1,
       category: "Web Apps",
-      technologies: ["React", "TypeScript", "D3.js", "Node.js"],
-      liveUrl: "#",
+      technologies: ["React", "Node.js","Django API" ,"MongoDB", "Stripe", "AWS", "Docker"],
+      liveUrl: "/portfolio/betalyzer",
       githubUrl: "#"
     },
     {
@@ -180,12 +180,12 @@ const PortfolioSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <Button variant="hero" size="xl" className="group">
             View All Projects
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
