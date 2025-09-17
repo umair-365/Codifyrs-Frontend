@@ -30,7 +30,6 @@ const BettingsystemSection = () => {
       <li>Bewin</li>
       <li>Flashscore</li>
       <li>Sofascore</li>
-      <li>Oddsportal</li>
       <li>Sbobet</li>
       <li>Veikkaus</li>
       <li>Nubet</li>
@@ -46,7 +45,7 @@ const BettingsystemSection = () => {
       portfolio4,
       portfolio5
     ],
-    techStack: ["Redis", "MongoDB", "SNS", "SQS", "Scrapyd", "CloudWatch", "Scrapy", "Porxies", "GIT"],
+    techStack: ["Redis", "MongoDB", "SNS", "SQS", "Scrapyd", "CloudWatch", "Scrapy", "Porxies", "GIT", "ETL Pipeline"],
   };
 
   useEffect(() => {

@@ -246,7 +246,7 @@ const ContactSection = () => {
             </div>
 
             {/* Quick Actions */}
-            <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
+            {/* <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
               <h4 className="font-semibold text-foreground mb-4">
                 Prefer a quick call?
               </h4>
@@ -257,7 +257,7 @@ const ContactSection = () => {
                 <Calendar className="w-4 h-4 mr-2" />
                 Schedule a Call
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
