@@ -45,7 +45,7 @@ const BettingsystemSection = () => {
       portfolio4,
       portfolio5
     ],
-    techStack: ["Redis", "MongoDB", "SNS", "SQS", "Scrapyd", "CloudWatch", "Scrapy", "Porxies", "GIT", "ETL Pipeline"],
+    techStack: ["Redis", "MongoDB", "SNS", "SQS", "Scrapyd", "CloudWatch", "Scrapy", "Proxies", "GIT", "ETL Pipeline"],
   };
 
   useEffect(() => {

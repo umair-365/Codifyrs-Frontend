@@ -38,7 +38,7 @@ const PortfolioSection = () => {
       description: "A centralized sports data platform that scrapes multiple betting and score websites, processes the information, and stores it in MongoDB with high efficiency using Redis, SNS, SQS, Scrapyd, and CloudWatch.",
       image: portfolio3,
       category: "Scraping & Automation",
-      technologies:  ["Redis", "MongoDB", "SNS", "SQS", "Scrapyd", "CloudWatch", "Scrapy", "Porxies", "GIT", "ETL Pipeline"],
+      technologies:  ["Redis", "MongoDB", "SNS", "SQS", "Scrapyd", "CloudWatch", "Scrapy", "Proxies", "GIT", "ETL Pipeline"],
       liveUrl: "/portfolio/betting_system",
       githubUrl: "#"
     },
