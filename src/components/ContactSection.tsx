@@ -61,8 +61,8 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "Lahore, Punjab Pakistan",
-      subtitle: "123 Street Drive, Suite 100"
+      details: "Kasur, Punjab Pakistan",
+      subtitle: "Ansari Street, Kot Azam Khan"
     },
     {
       icon: Clock,
