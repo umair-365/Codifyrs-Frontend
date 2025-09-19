@@ -2,7 +2,7 @@ import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import member1  from "../assets/umair2.jpg.jpeg";
 import member2 from "../assets/hussnain.jpg.jpg";
 import member3 from "../assets/muzmail.jpg.jpg";
-import member4 from "../assets/khubaib.jpg.png";
+import member4 from "../assets/khubaib_pic.jpeg";
 import member5 from "../assets/member5.jpg.png";
 import member6 from "../assets/member6.png";
 import person_logo from "../assets/SA.png";
